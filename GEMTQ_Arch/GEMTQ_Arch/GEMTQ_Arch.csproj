@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props')" />
+  <Import Project="..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7C0D5AA-BA05-442D-AB4E-2D89436C8BB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEMTQ_Arch</RootNamespace>
+    <AssemblyName>GEMTQ_Arch</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7B71A84E47E4303F99026145F78D2BB989BDE318</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GEMTQ_Arch_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Acrobat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Interop.Acrobat.1.0.1\lib\net\Interop.Acrobat.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.WIA">
+      <HintPath>..\..\Interop.WIA.dll\Interop.WIA.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_sec.Designer.cs">
+      <DependentUpon>Add_sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selectdata.cs" />
+    <Compile Include="DataACCESSlayer.cs" />
+    <Compile Include="DisplayFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayFile.Designer.cs">
+      <DependentUpon>DisplayFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_signout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_signout.Designer.cs">
+      <DependentUpon>frm_signout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner .Designer.cs">
+      <DependentUpon>Scanner .cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDepart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDepart.Designer.cs">
+      <DependentUpon>ManageDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDist.Designer.cs">
+      <DependentUpon>ManageDist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFile.Designer.cs">
+      <DependentUpon>AddFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageFile.Designer.cs">
+      <DependentUpon>ManageFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageKind.Designer.cs">
+      <DependentUpon>ManageKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDetails.Designer.cs">
+      <DependentUpon>FileDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fileImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fileImage.Designer.cs">
+      <DependentUpon>fileImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fileslist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fileslist.Designer.cs">
+      <DependentUpon>fileslist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reciveFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reciveFiles.Designer.cs">
+      <DependentUpon>reciveFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendFile.Designer.cs">
+      <DependentUpon>SendFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranseMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranseMessages.Designer.cs">
+      <DependentUpon>TranseMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransFiles.Designer.cs">
+      <DependentUpon>TransFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateUsers.Designer.cs">
+      <DependentUpon>UpdateUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userslist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userslist.Designer.cs">
+      <DependentUpon>userslist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wait.designer.cs">
+      <DependentUpon>Wait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIAScanner.cs" />
+    <EmbeddedResource Include="Add_sec.resx">
+      <DependentUpon>Add_sec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayFile.resx">
+      <DependentUpon>DisplayFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_signout.resx">
+      <DependentUpon>frm_signout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDepart.resx">
+      <DependentUpon>ManageDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDist.resx">
+      <DependentUpon>ManageDist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFile.resx">
+      <DependentUpon>AddFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageFile.resx">
+      <DependentUpon>ManageFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageKind.resx">
+      <DependentUpon>ManageKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDetails.resx">
+      <DependentUpon>FileDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fileImage.resx">
+      <DependentUpon>fileImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fileslist.resx">
+      <DependentUpon>fileslist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reciveFiles.resx">
+      <DependentUpon>reciveFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner .resx">
+      <DependentUpon>Scanner .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendFile.resx">
+      <DependentUpon>SendFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranseMessages.resx">
+      <DependentUpon>TranseMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransFiles.resx">
+      <DependentUpon>TransFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateUsers.resx">
+      <DependentUpon>UpdateUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userslist.resx">
+      <DependentUpon>userslist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wait.resx">
+      <DependentUpon>Wait.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GEMTQ_Arch_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Accessibility">
+      <Guid>{1EA4DBF0-3C3B-11CF-810C-00AA00389B71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\4558_-_Yes_No_Option-512.png" />
+    <Content Include="image\canva-left-arrow-icon-MACVXAw4xjk.png" />
+    <Content Include="image\Clipboard-red-icon.png" />
+    <Content Include="image\diagonal-left-down-arrow-button-339bc5af034cc386-512x512.png" />
+    <Content Include="image\exit.png" />
+    <Content Include="image\Folder-6-512.png" />
+    <Content Include="image\images.png" />
+    <Content Include="image\UI__2-512.png" />
+    <Content Include="image\x-2925826_960_720.png" />
+    <Content Include="image\‏‏4558_-_Yes_No_Option-512 - نسخة.png" />
+    <Content Include="Resources\Interop.WIA.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 R2 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.v8-xfa.props'))" />
+    <Error Condition="!Exists('..\packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PdfiumViewer.Native.x86_64.no_v8-no_xfa.2018.3.4.252\Build\PdfiumViewer.Native.x86_64.no_v8-no_xfa.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
